@@ -1,4 +1,5 @@
 ﻿using FactuSystem.Data.Request;
+using FactuSystem.Data.Response;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Contracts;
@@ -31,34 +32,47 @@ public class Producto
             Precio = item.Precio
         };
 
-    public bool Mofidicar(ProductoRequest contacto)
+    public bool Mofidicar(ProductoRequest item)
     {
         var cambio = false;
-        if (Codigo != contacto.Codigo)
+        if (Codigo != item.Codigo)
         {
-            Codigo = contacto.Codigo;
+            Codigo = item.Codigo;
             cambio = true;
         }
-        if (ProveedorID != contacto.ProveedorID)
+        if (ProveedorID != item.ProveedorID)
         {
-            ProveedorID = contacto.ProveedorID;
+            ProveedorID = item.ProveedorID;
             cambio = true;
         }
-        if (Nombre != contacto.Nombre)
+        if (Nombre != item.Nombre)
         {
-            Nombre = contacto.Nombre;
+            Nombre = item.Nombre;
             cambio = true;
         }
-        if (CategoriaID != contacto.CategoriaID)
+        if (CategoriaID != item.CategoriaID)
         {
-            CategoriaID = contacto.CategoriaID;
+            CategoriaID = item.CategoriaID;
             cambio = true;
         }
-        if (Precio != contacto.Precio)
+        if (Precio != item.Precio)
         {
-            Precio = contacto.Precio;
+            Precio = item.Precio;
             cambio = true;
         }
         return cambio;
     }
+
+    public ProductoResponse ToResponse()
+        => new()
+        {
+            Id = Id,
+            Codigo = Codigo,
+            Nombre = Nombre,
+            Precio = Precio,
+            CategoriaID = CategoriaID,
+            Categoria = Categoria != null? Categoria!.ToResponse():null,
+            ProveedorID = ProveedorID,
+            Proveedor = Proveedor != null? Proveedor!.ToResponse():null
+        };
 }
