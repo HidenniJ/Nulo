@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Contracts;
+using FactuSystem.Data.Request;
+using FactuSystem.Data.Response;
 
 namespace FactuSystem.Data.Model;
 
@@ -24,4 +26,23 @@ public class Factura
         0;//Falso
 
     public decimal SaldoPendiente { get; set; }
+
+    public static Factura Crear(FacturaRequest request)
+        => new()
+        {
+            ClienteId = request.ClienteId,
+            Fecha = DateTime.Now,
+            Detalles = request.Detalles
+            .Select(detalle=>FacturaDetalle.Crear(detalle))
+            .ToList()
+        };
+    public FacturaResponse ToResponse()
+        => new()
+        {
+            Id = Id,
+            ClienteId = ClienteId,
+            Fecha = Fecha,
+            Cliente = Cliente.ToResponse(),
+            Detalles = Detalles.Select(d => d.ToResponse()).ToList()
+        };
 }

@@ -5,7 +5,7 @@ namespace FactuSystem.Data.Response;
 public class FacturaResponse
 {
     public int Id { get; set; }
-    public int ContactoId { get; set; }
+    public int ClienteId { get; set; }
     public DateTime Fecha { get; set; }
     public ClienteResponse Cliente { get; set; }
     public virtual ICollection<FacturaDetalleResponse> Detalles { get; set; }
