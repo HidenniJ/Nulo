@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FactuSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b53d9991f6dc2dc9ac13bbadb6140e70e93b1a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3754a7a1a02115d98e88831a93fa2c16d48446ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("FactuSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FactuSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
