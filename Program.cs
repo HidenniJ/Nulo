@@ -28,4 +28,10 @@ app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
+using (var serviceScope =  app.Services.GetService<IServiceScopeFactory>()!.CreateScope())
+{
+    var dbContext = serviceScope.ServiceProvider
+        .GetRequiredService<MyDbContext>();
+}
+
 app.Run();
