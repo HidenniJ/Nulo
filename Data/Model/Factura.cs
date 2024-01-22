@@ -25,6 +25,7 @@ public class Factura
         :
         0;//Falso
 
+    public decimal SaldoPagado { get; set; }
     public decimal SaldoPendiente { get; set; }
 
     public static Factura Crear(FacturaRequest request)

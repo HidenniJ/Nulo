@@ -16,6 +16,7 @@ public class FacturaResponse
         Detalles.Sum(d => d.SubTotal) //Verdadero
         :
         0;//Falso
-
+        
+    public decimal SaldoPagado { get; set; }
     public decimal SaldoPendiente { get; set; }
 }

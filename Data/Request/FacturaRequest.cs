@@ -4,6 +4,7 @@ public class FacturaRequest
 {
     public int Id { get; set; }
     public int ClienteId { get; set; }
+    public DateTime Fecha { get; set; } = DateTime.Now;
     public virtual ICollection<FacturaDetalleRequest> Detalles { get; set; }
         = new List<FacturaDetalleRequest>();
     public decimal SubTotal =>
@@ -12,6 +13,7 @@ public class FacturaRequest
         :
         0;
 
+    public decimal SaldoPagado { get; set; }
     public decimal SaldoPendiente { get; set; }
 }
 
