@@ -26,6 +26,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Project X/2.0/FactuSystem/Pages/Facturacion/AddEditFactura.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cQWRkRWRpdEZhY3R1cmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project X/2.0/FactuSystem/Pages/Facturacion/FacturaCobrar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cRmFjdHVyYUNvYnJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project X/2.0/FactuSystem/Pages/Facturacion/FacturaPaga.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cRmFjdHVyYVBhZ2EucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project X/2.0/FactuSystem/Pages/Facturacion/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cX0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Project X/2.0/FactuSystem/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
