@@ -13,6 +13,7 @@ public class FacturaRequest
         :
         0;
 
+    public decimal Descuento { get; set; }
     public decimal SaldoPagado { get; set; }
     public decimal SaldoPendiente { get; set; }
 }
