@@ -81,6 +81,9 @@ namespace FactuSystem.Migrations
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("Descuento")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
