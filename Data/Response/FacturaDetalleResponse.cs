@@ -9,7 +9,10 @@ public class FacturaDetalleResponse
     public ProductoResponse Producto { get; set; } = null!;
     public int Cantidad { get; set; }
     public decimal Precio { get; set; }
+    public decimal Descuento { get; set; }
 
     [NotMapped]
     public decimal SubTotal => Cantidad * Precio;
+    [NotMapped]
+    public decimal TotalDesc => SubTotal * (Descuento / 100 );
 }

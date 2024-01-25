@@ -14,6 +14,7 @@ public class FacturaDetalle
     public int Cantidad { get; set; }
     [Column(TypeName = "decimal(18,2)")]
     public decimal Precio { get; set; }
+    public decimal Descuento { get; set; }
 
     #region Relaciones
     [ForeignKey(nameof(FacturaId))]
@@ -24,6 +25,8 @@ public class FacturaDetalle
 
     [NotMapped]
     public decimal SubTotal => Cantidad * Precio;
+    [NotMapped]
+    public decimal TotalDesc => SubTotal * (Descuento / 100 );
 
     public static FacturaDetalle Crear(FacturaDetalleRequest request)
     => new()

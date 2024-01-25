@@ -16,7 +16,13 @@ public class FacturaResponse
         Detalles.Sum(d => d.SubTotal) //Verdadero
         :
         0;//Falso
-    public decimal Descuento { get; set; }
+
+    [NotMapped]
+    public decimal Descuento =>
+        Detalles != null ? //IF
+        Detalles.Sum(d => d.TotalDesc) //Verdadero
+        :
+        0;//Falso
     public decimal SaldoPagado { get; set; }
     public decimal SaldoPendiente { get; set; }
 }
