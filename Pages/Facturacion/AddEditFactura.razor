@@ -9,7 +9,7 @@
 
 <!-- Agregar el diseño de la página aquí -->
 <div class="row mb-3">
-    <div class="col-md-11">
+    <div class="col-md-11 d-print-none">
         <h3><b>Registro de Factura</b></h3>
     </div>
     <div class="col-md-1">
@@ -92,7 +92,21 @@
     </div>
 
     <div class="row">
-        
+        <div class="col-md-6">
+            <div class="input-group d-print-none">
+                <label for="AnimalId" class="input-group-text">Descuento:</label>
+                <InputNumber @bind-Value="detalleFacturaRequest.Descuento" id="Cantidad" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group d-print-none">
+                <label for="AnimalId" class="input-group-text">Monto Pagado:</label>
+                <InputNumber @bind-Value="facturaRequest.SaldoPagado" 
+                        id="montoPagado" class="form-control" 
+                        />
+            </div>
+        </div>          
+
         <div class="col-md-2 mt-2">
             <button class="btn btn-outline-success d-print-none" type="button"
                 @onclick="AgregarAlDetalle">
@@ -111,15 +125,10 @@
                     Cantidad
                 </th>
                 <th>Descripcion</th>
-                <th>
-                    Precio
-                </th>
-                <th>
-                    SubTotal
-                </th>
-                <th>
-                    ITBIS
-                </th>
+                <th>Precio</th>
+                <th>Descuento</th>
+                <th>SubTotal</th>
+                <th>ITBIS</th>
                 <th>
                     ...
                 </th>
@@ -137,7 +146,12 @@
                     </td>
                     <td class="col w-25">
                         @detalle.Precio.ToString("N2")
-                     </td>
+                    </td>
+                    <td class="col w-25">
+                        <span style="white-space: nowrap;">
+                            @($"{(detalle.SubTotal * (detalle.Descuento / 100)):N2}")
+                        </span>
+                    </td>
 
                     <td class="col text-center">
                         @detalle.SubTotal.ToString("N2")
@@ -162,21 +176,33 @@
         <div class="card-body">
             @if (Cobro)
             {
-                <label for=""><b>ITBIS:</b></label>
+
+                <label for=""><b>ITBIS: </b></label>
                 @($"{(facturaRequest.SubTotal * 0.18m):N2}")
                 <br>
-                <label><b>Total:</b></label>
+
+                <label for=""><b>Descuento: </b></label>
+                @($"{(facturaRequest.SubTotal * (facturaRequest.Descuento / 100m)):N2}")
+                <br>
+
+                <label><b>Total: </b></label>
                 @facturaRequest.SubTotal.ToString("N2")
+                <br>
+
+                <label for=""><b>SubTotal: </b></label>
+                @($"{(facturaRequest.SubTotal - facturaRequest.Descuento):N2}")
+
                 <div class="mb-3">
                     <button 
                         class="btn btn-success d-print-none" 
                         type="button"
-                        @onclick="Cobrar">
-                        Cobrar
+                        @onclick="CalcularCambio">
+                        Pagar
                     </button>
                 </div>
             }
-            @if (Pagado)
+
+           @*@ @if (Pagado)
             {
                 <label for=""><b>ITBIS:</b></label>
                 @($"{(facturaRequest.SubTotal * 0.18m):N2}")
@@ -206,14 +232,25 @@
                         </div>
                     </div>
                 </div>
-            }
+            }*@
+
             @if (Chance )
             {
-                <label for=""><b>ITBIS:</b></label>
+                <label for=""><b>ITBIS: </b></label>
                 @($"{(facturaRequest.SubTotal * 0.18m):N2}")
                 <br>
-                <label><b>Total:</b></label>
+
+                <label for=""><b>Descuento: </b></label>
+                @($"{(facturaRequest.SubTotal * (facturaRequest.Descuento / 100m)):N2}")
+                <br>
+
+                <label><b>Total: </b></label>
                 @facturaRequest.SubTotal.ToString("N2")
+                <br>
+
+                <label for=""><b>SubTotal: </b></label>
+                @($"{(facturaRequest.SubTotal - facturaRequest.Descuento):N2}")
+
                 <div class="card mb-3 p-3">
                     <h5 class="card-header"><b>Cambio</b></h5>
                     <div class="card-body">
@@ -355,6 +392,7 @@
     void CalcularCambio()
     {
         Pagado = false;
+        Cobro = false;
         Chance = true;
         if (facturaRequest.SaldoPagado >= facturaRequest.SubTotal)
         {
