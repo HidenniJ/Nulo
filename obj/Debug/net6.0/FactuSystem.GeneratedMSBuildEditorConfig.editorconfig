@@ -9,71 +9,79 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FactuSystem
 build_property.RootNamespace = FactuSystem
-build_property.ProjectDir = C:\Project X\2.0\FactuSystem\
+build_property.ProjectDir = C:\Users\Maiky\Desktop\Project X\FactuSystem\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Project X\2.0\FactuSystem
+build_property.MSBuildProjectDirectory = C:\Users\Maiky\Desktop\Project X\FactuSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Project X/2.0/FactuSystem/App.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/Counter.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/Facturacion/AddEditFactura.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Facturacion/AddEditFactura.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cQWRkRWRpdEZhY3R1cmEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/Facturacion/FacturaCobrar.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Facturacion/FacturaCobrar.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cRmFjdHVyYUNvYnJhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/Facturacion/FacturaPaga.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Facturacion/FacturaPaga.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cRmFjdHVyYVBhZ2EucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/Facturacion/_Imports.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Facturacion/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdHVyYWNpb25cX0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/FetchData.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/Index.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Shared/SurveyPrompt.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Proveedor/Proveedor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmVlZG9yXFByb3ZlZWRvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Proveedor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmVlZG9yXF9JbXBvcnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/_Imports.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Shared/MainLayout.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-9sun4juars
 
-[C:/Project X/2.0/FactuSystem/Shared/NavMenu.razor]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-bwuugih4z5
 
-[C:/Project X/2.0/FactuSystem/Pages/Error.cshtml]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/_Host.cshtml]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project X/2.0/FactuSystem/Pages/_Layout.cshtml]
+[C:/Users/Maiky/Desktop/Project X/FactuSystem/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

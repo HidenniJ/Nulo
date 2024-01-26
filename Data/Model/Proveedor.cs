@@ -1,4 +1,5 @@
 ﻿using FactuSystem.Data.Response;
+using FactuSystem.Data.Request;
 using System.ComponentModel.DataAnnotations;
 
 namespace FactuSystem.Data.Model;
@@ -17,4 +18,38 @@ public class Proveedor
         Id = Id,
         NombreEmp = NombreEmp
     };
+
+    public static Proveedor Crear(ProveedorRequest item)
+        => new()
+        {
+            NombreEmp = item.NombreEmp,
+            Email = item.Email,
+            Telefono = item.Telefono,
+            Direccion = item.Direccion
+        };
+        public bool Mofidicar(ProveedorRequest item)
+        {
+            var cambio = false;
+            if(NombreEmp != item.NombreEmp)
+            {
+                NombreEmp = item.NombreEmp;
+                cambio = true;
+            }
+            if (Email != item.Email)
+            {
+                Email = item.Email;
+                cambio = true;
+            }
+            if (Telefono != item.Telefono)
+            {
+                Telefono = item.Telefono;
+                cambio = true;
+            }
+            if(Direccion != item.Direccion)
+            {
+                Direccion = item.Direccion;
+                cambio = true;
+            }
+            return cambio;
+        }
 }

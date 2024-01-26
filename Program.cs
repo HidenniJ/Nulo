@@ -13,6 +13,8 @@ builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddDbContext<MyDbContext>();
 builder.Services.AddScoped<IMyDbContext,MyDbContext>();
 builder.Services.AddScoped<IFacturaServices,FacturaServices>();
+builder.Services.AddScoped<IProductoServices,ProductoServices>();
+builder.Services.AddScoped<IProveedorServices,ProveedorServices>();
 
 var app = builder.Build();
 

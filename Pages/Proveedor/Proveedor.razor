@@ -1,0 +1,120 @@
+@page "/page/proveedor"
+@inject IProveedorServices proveedorServices;
+
+<h3>Proveedores</h3>
+
+<div class="row">
+    <div class="col-6">
+    <EditForm Model="proveedorRequest" OnValidSubmit="Send">
+            <DataAnnotationsValidator/>
+            <ValidationSummary/>
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre completo</label>
+                <input type="text" class="form-control" id="nombreCompleto" @bind-value="proveedorRequest.NombreEmp" required />
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" class="form-control" id="correo" @bind-value="proveedorRequest.Email" required />
+            </div>
+            <div class="form-group">
+                <label for="correo">Telefono</label>
+                <input class="form-control" id="correo" @bind-value="proveedorRequest.Telefono" required />
+            </div>
+            <div class="form-group">
+                <label for="correo">Direccion</label>
+                <input class="form-control" id="correo" @bind-value="proveedorRequest.Direccion" required />
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn btn-outline-primary">Guardar</button>
+                <button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
+            </div>
+        </EditForm>
+        @*<form @submit="Send">
+            
+            <div class="form-group">
+                <label for="rol">Rol</label>
+                <select class="form-control" id="rol" @bind="proveedorRequest.Rol">
+                    <option value="Administrador">Administrador</option>
+                    <option value="Empleado">Empleado</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear usuario</button>
+        </form>*@
+    </div>
+    <div class="col-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre completo</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var proveedorRow in Proveedores)
+                {
+                    <tr>
+                        <td>@proveedorRow.NombreEmp</td>
+                        <td>@proveedorRow.Email</td>
+                        <td>@proveedorRow.Telefono</td>
+                        <td>@proveedorRow.Direccion</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code
+{
+    public string Filtro { get; set; } = "";
+    public List<ProveedorResponse> Proveedores { get; set; } = new();
+    public ProveedorRequest proveedorRequest { get; set; } = new();
+
+    async Task CargarContactos()
+    {
+        var resultado =
+        await proveedorServices.Consultar(Filtro);
+        if (resultado.Success)
+        {
+            Proveedores = resultado.Data!;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarContactos();
+    }
+
+    void Cancelar()
+    {
+        proveedorRequest  = new ProveedorRequest();
+    }
+    public async Task Send()
+    {
+        if(proveedorRequest.Id == 0)
+        {
+            //Debo registrar el contacto..
+            var r = await proveedorServices.Crear(proveedorRequest);
+            if (r.Success)
+            {
+                Cancelar();
+                await CargarContactos();
+                StateHasChanged();
+            }
+        }
+        else
+        {
+            //Debo solicitar modificar el contacto...
+            var r = await proveedorServices.Modificar(proveedorRequest);
+            if (r.Success)
+            {
+                Cancelar();
+                await CargarContactos();
+                StateHasChanged();
+            }
+        }
+    }
+}

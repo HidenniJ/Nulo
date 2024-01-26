@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FactuSystem.Data.Services;
 
-public class ProductoServices
+public class ProductoServices : IProductoServices
 {
     private readonly IMyDbContext context;
 
