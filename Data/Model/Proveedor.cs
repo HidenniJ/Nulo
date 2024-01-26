@@ -16,7 +16,10 @@ public class Proveedor
     public ProveedorResponse? ToResponse() => new()
     {
         Id = Id,
-        NombreEmp = NombreEmp
+        NombreEmp = NombreEmp,
+        Email = Email,
+        Telefono = Telefono,
+        Direccion = Direccion,
     };
 
     public static Proveedor Crear(ProveedorRequest item)

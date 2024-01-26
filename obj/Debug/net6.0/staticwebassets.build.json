@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qy3OyZjejO+MkJIDBN7NNfNa75eB8A8SlGy4rkH6SKA=",
+  "Hash": "AVpb1Z4Lz+W+IYWG0uYnV/38OKCpoxm7tHY+V+HkzmE=",
   "Source": "FactuSystem",
   "BasePath": "_content/FactuSystem",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "FactuSystem\\wwwroot",
       "Source": "FactuSystem",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FactuSystem.styles.css",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FactuSystem.styles.css",
       "SourceId": "FactuSystem",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "FactuSystem.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FactuSystem.styles.css"
+      "OriginalItemSpec": "C:\\Project X\\1.0\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FactuSystem.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FactuSystem.bundle.scp.css",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FactuSystem.bundle.scp.css",
       "SourceId": "FactuSystem",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "FactuSystem.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FactuSystem.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Project X\\1.0\\FactuSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FactuSystem.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\css\\site.css",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\favicon.ico",
       "SourceId": "FactuSystem",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Maiky\\Desktop\\Project X\\FactuSystem\\wwwroot\\",
+      "ContentRoot": "C:\\Project X\\1.0\\FactuSystem\\wwwroot\\",
       "BasePath": "_content/FactuSystem",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
