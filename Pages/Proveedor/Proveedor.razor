@@ -1,58 +1,59 @@
-@page "/page/proveedor"
-@inject IProveedorServices proveedorServices;
+@page "/proveedor"
 
-<h3>Proveedores</h3>
+<h1>Proveedores</h1>
 
-@if(ShowForm)
-{
-
-    <div class="row">
-        <div class="col-6">
-        
-            <div class="card w-75">
-                <div class="card-body">
-                    <h5 class="card-title"><b>@TituloForm</b></h5>
-                    <EditForm Model="proveedorRequest" OnValidSubmit="Send">
-                        <DataAnnotationsValidator/>
-                        <ValidationSummary/>
-                        <div class="form-group">
-                            <label for="nombreCompleto">Nombre completo</label>
-                            <input type="text" class="form-control" id="nombreCompleto" @bind-value="proveedorRequest.NombreEmp" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="correo">Correo</label>
-                            <input type="email" class="form-control" id="correo" @bind-value="proveedorRequest.Email" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="correo">Telefono</label>
-                            <input class="form-control" id="correo" @bind-value="proveedorRequest.Telefono" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="correo">Direccion</label>
-                            <input class="form-control" id="correo" @bind-value="proveedorRequest.Direccion" required />
-                        </div>
-
-                        <div class="btn-group">
-                            <button type="submit" class="btn btn-outline-primary">Guardar</button>
-                            <button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
-                        </div>
-                    </EditForm>
-                </div>
+<div class="modal" style="display: @(showCard ? "block" : "none")" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>@TituloForm</b></h5>
+                <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close" @onclick="CloseCard">
+                    <span aria-hidden="true" class="oi oi-x"></span>
+                </button>
             </div>
+
+            <EditForm Model="proveedorRequest" OnValidSubmit="Send">
+                <DataAnnotationsValidator/>
+                <ValidationSummary/>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="nombreCompleto">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" @bind-value="proveedorRequest.NombreEmp" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" class="form-control" id="correo" @bind-value="proveedorRequest.Email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Telefono</label>
+                        <input class="form-control" id="correo" @bind-value="proveedorRequest.Telefono" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Direccion</label>
+                        <input class="form-control" id="correo" @bind-value="proveedorRequest.Direccion" required />
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-outline-primary">Guardar</button>
+                    </div>
+                </div>
+            </EditForm>
+
             
+
         </div>
     </div>
-}
-else
-{
+</div>
+
+<div class="table-container">
     <div class="card w-75">
         <div class="card-body">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                @onclick="()=>{ShowForm = !ShowForm;}">
-
+            <button class="btn btn-outline-success" @onclick="ShowCard">
                 <span class="oi oi-plus"></span>
-                Nuevo Proveedor
+                Nuevo proveedor
             </button>
             
             <div class="row">
@@ -90,11 +91,12 @@ else
                                 <td>@proveedorRow.Telefono</td>
                                 <td>@proveedorRow.Direccion</td>
                                 <td>
-                                    <button 
-                                        class="btn btn-outline-primary">
+                                    <button @onclick="()=>Seleccionar(proveedorRow.Id)"
+                                        class="btn btn-outline-warning">
                                         <span class="oi oi-pencil"></span>
                                     </button>
-                                    <button class="btn btn-outline-danger">
+                                    <button @onclick="()=>Eliminar(proveedorRow)"
+                                        class="btn btn-outline-danger">
                                         <span class="oi oi-trash"></span>
                                     </button>
                                 </td>
@@ -105,17 +107,28 @@ else
             </div>
         </div>
     </div>
-}
+    
+</div>
 
-
-@code
-{
+@code {
     public string TituloForm => proveedorRequest.Id == 0 ? 
     "Agregar proveedor" : "Modificar proveedor";
+    
     public string Filtro { get; set; } = "";
     public bool ShowForm { get; set; } = false;
     public List<ProveedorResponse> Proveedores { get; set; } = new();
     public ProveedorRequest proveedorRequest { get; set; } = new();
+    public bool showCard { get; set; } = false;
+
+    void ShowCard()
+    {
+        showCard = true;
+    }
+
+    void CloseCard()
+    {
+        showCard = false;
+    }
 
     async Task CargarContactos()
     {
@@ -135,7 +148,7 @@ else
     void Cancelar()
     {
         proveedorRequest  = new ProveedorRequest();
-        ShowForm = false;
+        showCard = false;
     }
     public async Task Send()
     {
@@ -162,4 +175,23 @@ else
             }
         }
     }
+
+    public void Seleccionar(int Id)
+    {
+        showCard = true;
+        proveedorRequest = Proveedores
+        .Where(c => c.Id == Id)
+        .Select(c => c.ToRequest())
+        .FirstOrDefault() ?? new ProveedorRequest();
+    }
+    public async Task Eliminar(ProveedorResponse item)
+    {
+        var resultado = await proveedorServices.Eliminar(item.ToRequest());
+        if (resultado.Success)
+        {
+            await CargarContactos();
+            StateHasChanged();
+        }
+    }
+
 }
