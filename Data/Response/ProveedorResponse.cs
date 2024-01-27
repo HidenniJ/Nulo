@@ -1,4 +1,6 @@
-﻿namespace FactuSystem.Data.Response;
+﻿using FactuSystem.Data.Request;
+
+namespace FactuSystem.Data.Response;
 
 public class ProveedorResponse
 {
@@ -7,4 +9,16 @@ public class ProveedorResponse
     public string? Email { get; set; }
     public string Telefono { get; set; } = null!;
     public string? Direccion { get; set; }
+
+    public ProveedorRequest ToRequest()
+    {
+        return new ProveedorRequest
+        {
+            Id = Id,
+            NombreEmp = NombreEmp,
+            Email = Email,
+            Telefono = Telefono,
+            Direccion = Direccion
+        };
+    }
 }
